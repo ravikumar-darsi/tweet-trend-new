@@ -43,7 +43,7 @@ environment{
                           "files": [
                             {
                               "pattern": "jarstaging/(*)",
-                              "target": "projectd-libs-release//{1}",
+                              "target": "projectd-libs-release-local/{1}",
                               "flat": "false",
                               "props" : "${properties}",
                               "exclusions": [ "*.sha1", "*.md5"]
