@@ -75,7 +75,7 @@ environment{
         steps {
             script {
                echo '<--------------- Docker Publish Started --------------->'  
-                docker.withRegistry(registry, 'artifact-cred'){
+                docker.withRegistry(registry, 'Jfrog-cred'){
                     app.push()
                 }    
                echo '<--------------- Docker Publish Ended --------------->'  
