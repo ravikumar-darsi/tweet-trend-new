@@ -1,6 +1,6 @@
 def registry = 'https://projectd.jfrog.io'
-   def imageName = 'projectd.jfrog.io/projectd-docker-local/ttrend'
-   def version   = '2.1.2'
+def imageName = 'projectd.jfrog.io/projectd-docker-local/ttrend'
+def version   = '2.1.2'
 pipeline {
     agent {
         node{
@@ -39,7 +39,7 @@ environment{
         steps {
             script {
                     echo '<--------------- Jar Publish Started --------------->'
-                     def server = Artifactory.newServer url:registry+"/artifactory" ,  credentialsId:"artifact-cred"
+                     def server = Artifactory.newServer url:registry+"/artifactory" ,  credentialsId:"Jfrog-cred"
                      def properties = "buildid=${env.BUILD_ID},commitid=${GIT_COMMIT}";
                      def uploadSpec = """{
                           "files": [
